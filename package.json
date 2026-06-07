@@ -1,0 +1,12 @@
+{
+  "name": "vamos-flashcards",
+  "version": "1.0.0",
+  "description": "Application de flashcards pour apprendre le vocabulaire espagnol de base",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
