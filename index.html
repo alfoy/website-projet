@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Vamos! Flashcards — Apprends l'espagnol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>¡Vamos! <span>Flashcards</span></h1>
+    <p class="subtitle">Apprends le vocabulaire espagnol, une carte à la fois</p>
+  </header>
+
+  <main>
+
+    <!-- Écran de saisie du pseudo -->
+    <section id="login-screen" class="screen">
+      <h2>Quel est ton pseudo ?</h2>
+      <p>Il sert à retrouver ta progression à chaque visite.</p>
+      <form id="login-form">
+        <input type="text" id="pseudo-input" placeholder="Ex. : maria123" autocomplete="off" required>
+        <button type="submit">Commencer</button>
+      </form>
+    </section>
+
+    <!-- Écran principal de révision -->
+    <section id="quiz-screen" class="screen hidden">
+      <div class="top-bar">
+        <p id="welcome-message"></p>
+        <p id="progress-summary"></p>
+      </div>
+
+      <div class="card-container">
+        <div id="flashcard" class="flashcard">
+          <div class="flashcard-face flashcard-front">
+            <span id="spanish-word"></span>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <span id="french-word"></span>
+          </div>
+        </div>
+        <p class="hint">Clique sur la carte pour la retourner</p>
+      </div>
+
+      <div id="answer-buttons" class="answer-buttons hidden">
+        <button id="btn-knew" class="btn btn-success">✓ Je savais</button>
+        <button id="btn-didnt-know" class="btn btn-danger">✗ Je ne savais pas</button>
+      </div>
+
+      <button id="btn-next" class="btn btn-secondary hidden">Carte suivante →</button>
+    </section>
+
+    <!-- Écran de fin -->
+    <section id="end-screen" class="screen hidden">
+      <h2>¡Felicidades ! 🎉</h2>
+      <p>Tu as terminé toutes les cartes de cette session.</p>
+      <p id="final-score"></p>
+      <button id="btn-restart" class="btn btn-secondary">Recommencer une session</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Fait pour apprendre l'espagnol, mot par mot.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
